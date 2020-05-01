@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private AktivisEntity aktivisEntity;
     public static AppDatabase db;
 
-    //Atribut untuk mendisplay hasil data
+    //Atribut menampilkan data
     List<AktivisEntity> aktivisEntities = new ArrayList<>();
     List<AktivisEntity> aktivisEntityListByZone = new ArrayList<>();
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 AppDatabase.class,"aktivis")
                 .allowMainThreadQueries().build();
 
-        //TAMBAH DATA
+        //Tambah Data
         aktivisEntity = new AktivisEntity();
         aktivisEntity.setNamaAktivis("Novita Sari");
         aktivisEntity.setEmailAktivis("novi@gmail.com");
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         db.aktivisDao().tambahAktivis(aktivisEntity);
 
-        //TAMPIL SELURUH DATA
+        //Tampil Seluruh Data
         Log.d("TAMPIL","Tampil seluruh data aktivis");
         Log.d("TAMPIL","===========================");
 
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("TAMPIL","========================");
         }
 
-        //TAMPIL BERDASARKAN ZONA
+        //Tampil Berdasarakan Zona
         Log.e("ZONE","Data Aktivis berdasarkan Zona");
         Log.e("ZONE","===================");
         aktivisEntityListByZone = db.aktivisDao().findByZone("Jakarta");

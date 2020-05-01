@@ -1,5 +1,11 @@
 package com.elraiz.roomdatabase;
 
+//NIM : 10117163
+//Nama : Muhamad El Raiz
+//Kelas : IF-5
+
+//1 Mei 2020 Pembuatan AktivisDao,Entity AppDatabase dan MainActivity
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
